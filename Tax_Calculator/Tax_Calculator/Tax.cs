@@ -23,10 +23,11 @@ namespace Tax_Calculator
 
         private void bttnConfirmTax_Click(object sender, EventArgs e)
         {
-            int tax;
+            float tax;
             tax = Int32.Parse(txtBoxTax.Text);
-            double taxFinal = tax / 100;
-            double price = cost * taxFinal;
+            float taxFinal = tax / 100;
+            // MessageBox.Show(taxFinal.ToString());
+            float price = cost * taxFinal;
             MessageBox.Show(price.ToString());
         }
     }
